@@ -1,0 +1,18 @@
+.dropdown {
+    padding: 15px 170px 15px 10px;
+    border-radius: 6px;
+    box-shadow: 0 3px 16px 0 rgb(0 0 0 / 80%);
+    border: solid 1px #ffffff;
+    background: transparent;
+    font-size: 20px;
+    color: #97a5a7;
+}
+select option {
+    margin: 8.6px 11px 0;
+    padding: 22px 17px 11.4px;
+    opacity: 0.59;
+    box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
+    background-color: transparent;
+    color: red;
+    /* color: red; */
+}

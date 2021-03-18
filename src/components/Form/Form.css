@@ -1,0 +1,13 @@
+.play {
+    text-align: center;
+    padding-top: 16%;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+.play:hover {
+    cursor: pointer;
+}
+.start-game {
+    font-family: 'Lato', sans-serif;
+    margin-left: 10px;
+}
