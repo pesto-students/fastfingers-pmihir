@@ -30,6 +30,11 @@ class Form extends Component {
         sessionStorage.setItem(
             "selectedDifficulty", this.state.form.selectedDiffculty
         );
+        console.log(sessionStorage.getItem('scores'));
+        if (!sessionStorage.getItem('scores')) {
+            let temp = [];
+            sessionStorage.setItem("scores", JSON.stringify(temp));
+        }
     }
     render() {
         return (

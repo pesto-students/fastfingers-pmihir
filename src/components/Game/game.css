@@ -6,3 +6,47 @@
 .highlight {
     color: yellow;
 }
+.wrongTypeWord {
+    color: green;
+}
+.game {
+    display: flex;
+    flex-direction: column;
+    color: red;
+    padding: 3%;
+}
+.main {
+    display: flex;
+    /* padding-top: 7%;
+    min-height: 25rem; */
+    /* border: 2px solid green; */
+    margin-top: 5%;
+}
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+justify-content: flex-start;
+/* align-items: center; */
+    color: red;
+    border: 1px solid red;
+    padding: 1%;
+    border-radius: 2%;
+    min-width: 150px;
+}
+.timer-input {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    /* flex-direction: column; */
+}
+.timer {
+    font-size: 4rem;
+    color: white;
+}
+.word {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: white;
+    line-height: 2.1;
+}

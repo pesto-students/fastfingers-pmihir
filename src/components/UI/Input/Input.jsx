@@ -9,7 +9,6 @@ const Input = (props) => {
     }, [props.typeWord]);
     return (
         <div>
-            {props.typeWord}
             <input id="inputTypeWord" className="input-text" value={props.typeWord} name="name" onChange={props.onChangeHandler} placeholder="TYPE YOUR NAME" type="text" />
         </div>
     );
