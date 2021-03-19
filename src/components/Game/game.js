@@ -138,27 +138,7 @@ class game extends Component {
 
     render() {
         const { word, timer, typeWord } = this.state;
-        // let highlightWord;
-        // if (word.search(typeWord) === 0) {
-        //     temp = typeWord.length;
-        //     highlightWord = <span><span className="highlight">{word.slice(0, typeWord.length)}</span>{word.slice(typeWord.length, word.length)}</span>
-        // } else if (word.search(typeWord)) {
-        //     console.log(temp);
-        //     highlightWord = <span><span className="highlight">{word.slice(0, temp)}</span><span className="wrongTypeWord">{word.slice(temp, typeWord.length)}</span>{word.slice(typeWord.length, word.length)}</span>
-        // }
-        // if (word.search(typeWord) === 0) {
-        //     highlightWord = <span><span className="highlight">{word.slice(0, typeWord.length)}</span>{word.slice(typeWord.length, word.length)}</span>
-        // }
         return (
-            // <div className="card" style={{ color: "red", padding: "100px 100px" }}>
-            //     {word.length > 0 && word}
-            //     <div>{timer}</div>
-            //     <div>{highlightWord}</div>
-            //     {this.formatter(userScore)}
-            //     {difficulty}
-            //     <Input typeWord={typeWord} onChangeHandler={this.typeWordChangeHandler} />
-            //     <button onClick={this.stopGame}>STOP</button>
-            // </div>
             <Aux>
                 <div className="game">
                     <div className="header">
@@ -184,15 +164,6 @@ class game extends Component {
         );
     }
 }
-
-// const Highlighter = ({ word }) => {
-//     let typeWordTemp = document.getElementById("inputTypeWord").value;
-//     const temp1 = word.search(typeWordTemp) + typeWordTemp.length;
-//     const temp2 = word.slice(temp1, typeWordTemp.length).length;
-//     const temp3 = word.slice(typeWordTemp.length, word.length).length;
-//     console.log(word.search(typeWordTemp) + typeWordTemp.length);
-//     return (<span><span className="highlight">{word.slice(0, temp1)}</span><span className="wrongTypeWord">{word.slice(temp1, temp2)}</span>{word.slice(temp2, temp3)}</span>);
-// }
 
 export default game;
 
