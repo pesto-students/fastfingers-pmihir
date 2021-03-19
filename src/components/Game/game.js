@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import data from '../../data/dictionary.json';
 import './game.css';
 import Input from '../UI/Input/Input';
-import { useHistory } from 'react-router-dom';
 import Aux from '../hoc/_Aux';
 import GameHeader from '../Game-Header/GameHeader';
 import ScoreBoard from '../Main-Game/ScoreBoard';
@@ -58,8 +57,6 @@ class game extends Component {
         this.time1 = new Date();
 
         let scores = JSON.parse(sessionStorage.getItem('scores'));
-        console.log(typeof scores);
-        console.log(scores);
         if (scores && scores.length !== 0) {
             this.scoreArr = scores;
         }
@@ -90,10 +87,7 @@ class game extends Component {
     }
 
     timerValue = (word) => {
-        console.log(word);
-        console.log(this.userDifficultyFactor);
         let timer = (Math.ceil(word.length / this.userDifficultyFactor));
-        console.log(timer);
         return timer > 2 ? timer : 2;
     }
 
@@ -143,8 +137,8 @@ class game extends Component {
     }
 
     render() {
-        const { word, timer, typeWord, displayWord, difficulty, userScore } = this.state;
-        let highlightWord;
+        const { word, timer, typeWord } = this.state;
+        // let highlightWord;
         // if (word.search(typeWord) === 0) {
         //     temp = typeWord.length;
         //     highlightWord = <span><span className="highlight">{word.slice(0, typeWord.length)}</span>{word.slice(typeWord.length, word.length)}</span>
@@ -152,9 +146,9 @@ class game extends Component {
         //     console.log(temp);
         //     highlightWord = <span><span className="highlight">{word.slice(0, temp)}</span><span className="wrongTypeWord">{word.slice(temp, typeWord.length)}</span>{word.slice(typeWord.length, word.length)}</span>
         // }
-        if (word.search(typeWord) === 0) {
-            highlightWord = <span><span className="highlight">{word.slice(0, typeWord.length)}</span>{word.slice(typeWord.length, word.length)}</span>
-        }
+        // if (word.search(typeWord) === 0) {
+        //     highlightWord = <span><span className="highlight">{word.slice(0, typeWord.length)}</span>{word.slice(typeWord.length, word.length)}</span>
+        // }
         return (
             // <div className="card" style={{ color: "red", padding: "100px 100px" }}>
             //     {word.length > 0 && word}

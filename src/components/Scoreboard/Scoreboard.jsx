@@ -4,12 +4,13 @@ const Scoreboard = () => {
     const [score, setScore] = useState([]);
 
 
-    const scores = JSON.parse(sessionStorage.getItem('scores'));
+
     useEffect(() => {
+        const scores = JSON.parse(sessionStorage.getItem('scores'));
         if (scores && scores.length > 0) {
             setScore(scores);
         }
-    }, []);
+    }, [score]);
 
     return (
         <div style={{ color: "red" }}>
