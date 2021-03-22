@@ -1,0 +1,65 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+.main-score-card {
+    padding: 4%;
+}
+.score-dashboard {
+    color:#ff5155;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 5%;;
+}
+.score-game {
+  font-size: 3rem;
+  color: white;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  /* text-align: left; */
+}
+.score-time {
+    font-size: 4rem;
+    font-weight: 500;
+    color: white;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+.new-high-score {
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.7;
+    letter-spacing: normal;
+    /* text-transform: uppercase; */
+}
+.play-icon {
+    font-size: 2.2rem;
+    margin-top: 4%;
+    font-weight: 600;
+    color: #ea2328;
+}
+.play-again {
+    text-transform: uppercase;
+    padding-left: 25px;
+}
+.quit {
+    margin-top: 8%;
+}
+.quit > p {
+    color: #ff5155;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}

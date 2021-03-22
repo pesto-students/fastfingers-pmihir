@@ -9,6 +9,7 @@
     justify-content: center;
     height: 100%;
     color: #ff5155;
+    height: 100vh;
 }
 .fast-fingers {
     font-family: 'Lato', sans-serif;
@@ -20,6 +21,7 @@
     letter-spacing: normal;
     text-align: left;
     color: #ff5155;
+    margin-top: 2%;
   }
   .Line-1 {
     width: 53px;
