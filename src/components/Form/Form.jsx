@@ -3,6 +3,9 @@ import Aux from '../hoc/_Aux';
 import Input from '../UI/Input/Input';
 import Dropdown from '../UI/Dropdown/Dropdown';
 import './Form.css';
+import {
+    withRouter
+} from 'react-router-dom';
 
 const PLACE_HOLDER_NAME = "Type Your Name";
 
@@ -45,8 +48,8 @@ class Form extends Component {
                 let temp = [];
                 sessionStorage.setItem("scores", JSON.stringify(temp));
             }
-            // this.props.history.push('/game');
-            window.location.pathname = '/game';
+            this.props.history.push('/game');
+            // window.location.pathname = '/game';
             // window.location.replace(location.pathname + '/game');
         }
     }
@@ -67,4 +70,4 @@ class Form extends Component {
     }
 }
 
-export default Form;
+export default withRouter(Form);
