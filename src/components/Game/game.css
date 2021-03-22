@@ -3,16 +3,19 @@
      padding:"100px 100px" ;
      height: 100%;
 }
+*{
+  font-family: 'Montserrat', sans-serif;
+}
 .highlight {
-    color: yellow;
+    color:green;
 }
 .wrongTypeWord {
-    color: green;
+    color: yellow;
 }
 .game {
     display: flex;
     flex-direction: column;
-    color: red;
+    /* color: red; */
     padding: 3%;
 }
 .main {
@@ -21,23 +24,25 @@
     min-height: 25rem; */
     /* border: 2px solid green; */
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 .scoreboard {
     display: flex;
     flex-direction: column;
 justify-content: flex-start;
 /* align-items: center; */
-    color: red;
-    border: 1px solid red;
+    color: #ff5155;
+    border: 2px solid #ff5155;
     padding: 1%;
     border-radius: 2%;
-    min-width: 150px;
+    min-width: 200px;
 }
 .timer-input {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     align-items: center;
+    padding-right: 5%;
     /* flex-direction: column; */
 }
 .timer {
@@ -50,3 +55,102 @@ justify-content: flex-start;
     color: white;
     line-height: 2.1;
 }
+.base-timer {
+    position: relative;
+    height: 180px;
+    width: 190px;
+  }
+  
+  /* Removes SVG styling that would hide the time label */
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+
+  .base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
+  }
+  .base-timer__label {
+    position: absolute;
+    
+    /* Size should match the parent container */
+    width: 180px;
+    height: 180px;
+    
+    /* Keep the label aligned to the top */
+    top: 0;
+    
+    /* Create a flexible box that centers content vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* Sort of an arbitrary number; adjust to your liking */
+    font-size: 40px;
+    color: white;
+  }
+
+  .base-timer__path-remaining {
+    /* Just as thick as the original ring */
+    stroke-width: 7px;
+  
+    /* Rounds the line endings to create a seamless circle */
+    stroke-linecap: round;
+  
+    /* Makes sure the animation starts at the top of the circle */
+    transform: rotate(90deg);
+    transform-origin: center;
+  
+    /* One second aligns with the speed of the countdown timer */
+    transition: 1s linear all;
+  
+    /* Allows the ring to change color when the color value updates */
+    stroke: currentColor;
+  }
+  
+  .base-timer__svg {
+    /* Flips the svg and makes the animation to move left-to-right */
+    transform: scaleX(-1);
+  }
+  .base-timer__path-remaining.green {
+    color: rgb(65, 184, 131);
+  }
+  
+  .base-timer__path-remaining.orange {
+    color: orange;
+  }
+  
+  .base-timer__path-remaining.red {
+    color: #ff5155;
+  }
+  
+  /* .base-timer__label {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+  } */
+  .final {
+      text-transform: uppercase;
+      font-size: 1.8rem;
+        color: #bb2327;
+        font-family: 'Montserrat', sans-serif;
+        text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+  /* font-family: Gotham; */
+  /* font-size: 48px; */
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.21;
+        letter-spacing: normal;
+        padding-right: 5px;
+  }
+
+  .close-icon {
+      padding-right: 5px;
+  }

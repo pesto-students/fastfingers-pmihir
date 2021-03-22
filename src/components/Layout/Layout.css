@@ -3,5 +3,9 @@
     
     /* background-image: linear-gradient(to bottom, #000000 0%, #0c2c25),url('../../asssets/Group\ 243.svg'); */
     background-size: cover;
-    height: 100%;
+    min-height: 100vh;
+    /* min-height: -webkit-fill-available; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
