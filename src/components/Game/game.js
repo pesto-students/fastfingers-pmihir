@@ -6,6 +6,9 @@ import Aux from '../hoc/_Aux';
 import GameHeader from '../Game-Header/GameHeader';
 import ScoreBoard from '../Main-Game/ScoreBoard';
 import { AiOutlineClose } from 'react-icons/ai';
+import {
+    withRouter
+} from 'react-router-dom';
 
 const difficultyFactor = {
     "Easy": 1,
@@ -142,8 +145,8 @@ class game extends Component {
         this.scoreArr.push(formatScore);
         sessionStorage.setItem('scores', JSON.stringify(this.scoreArr));
         sessionStorage.setItem('selectedDifficulty', this.state.difficulty);
-        // this.props.history.push('/scoreboard');
-        window.location.pathname = '/scoreboard';
+        this.props.history.push('/scoreboard');
+        // window.location.pathname = '/scoreboard';
     }
 
     formatter = (timeInMilliSecond) => {
@@ -222,5 +225,5 @@ class game extends Component {
     }
 }
 
-export default game;
+export default withRouter(game);
 

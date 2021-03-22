@@ -3,6 +3,9 @@ import GameHeader from '../Game-Header/GameHeader';
 import Aux from '../hoc/_Aux';
 import './Scoreboard.css';
 import { FaRedoAlt } from 'react-icons/fa';
+import {
+    withRouter
+} from 'react-router-dom';
 
 const Scoreboard = (props) => {
     const [score, setScore] = useState(0);
@@ -19,7 +22,8 @@ const Scoreboard = (props) => {
     }, []);
     const quitGame = () => {
         // window.location.replace("http://localhost:3000");
-        window.location.pathname = '/';
+        // window.location.pathname = '/';
+        props.history.push('/');
     }
 
     return (
@@ -45,4 +49,4 @@ const Scoreboard = (props) => {
     );
 }
 
-export default Scoreboard;
+export default withRouter(Scoreboard);
