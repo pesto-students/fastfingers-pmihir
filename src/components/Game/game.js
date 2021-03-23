@@ -145,8 +145,6 @@ class game extends Component {
         this.scoreArr.push(formatScore);
         sessionStorage.setItem('scores', JSON.stringify(this.scoreArr));
         sessionStorage.setItem('selectedDifficulty', this.state.difficulty);
-        this.props.history.push('/scoreboard');
-        // window.location.pathname = '/scoreboard';
     }
 
     formatter = (timeInMilliSecond) => {

@@ -6,6 +6,15 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Game from './components/Game/game';
 import Scoreboard from './components/Scoreboard/Scoreboard';
 
+
+const appHeight = () => {
+  const doc = document.documentElement
+  doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+  doc.style.setProperty('--app-width', `${window.innerWidth}px`)
+}
+window.addEventListener('resize', appHeight)
+appHeight();
+
 function App() {
   return (
     <BrowserRouter>
