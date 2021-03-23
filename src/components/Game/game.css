@@ -14,9 +14,13 @@
 }
 .game {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     /* color: red; */
     padding: 3%;
+}
+.game > * {
+  flex-basis: 100%;
 }
 .main {
     display: flex;
@@ -36,6 +40,8 @@ justify-content: flex-start;
     padding: 1%;
     border-radius: 2%;
     min-width: 200px;
+    max-height: 345px;
+    overflow-y: auto;
 }
 .timer-input {
     display: flex;
@@ -103,7 +109,7 @@ justify-content: flex-start;
     transform-origin: center;
   
     /* One second aligns with the speed of the countdown timer */
-    transition: 1s linear all;
+    transition: auto;
   
     /* Allows the ring to change color when the color value updates */
     stroke: currentColor;
