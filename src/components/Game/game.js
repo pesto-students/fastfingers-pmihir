@@ -11,10 +11,29 @@ import {
 } from 'react-router-dom';
 
 const difficultyFactor = {
-    "Easy": 1,
-    "Medium": 1.5,
-    "Hard": 2
+    "EASY": 1,
+    "MEDIUM": 1.5,
+    "HARD": 2
 }
+
+// Warning occurs at 10s
+const WARNING_THRESHOLD = 2500;
+// Alert occurs at 5s
+const ALERT_THRESHOLD = 1000;
+
+const COLOR_CODES = {
+    info: {
+        color: "green"
+    },
+    warning: {
+        color: "orange",
+        threshold: WARNING_THRESHOLD
+    },
+    alert: {
+        color: "red",
+        threshold: ALERT_THRESHOLD
+    }
+};
 const FULL_DASH_ARRAY = 283;
 const GAME_PLACE_HOLDER = "Type a Word"
 
@@ -58,6 +77,9 @@ class game extends Component {
         }
         displayWord = this.setDifficultyArray(difficulty);
         word = this.pickRandomWord(displayWord);
+        console.log(this.easyArray);
+        console.log(this.mediumArray);
+        console.log(this.hardArray);
         timer = this.timerValue(word, this.userDifficultyFactor) * 1000;
         this.counterDownTimer(timer);
         this.setState({ difficulty, displayWord, word, timer });
@@ -70,7 +92,10 @@ class game extends Component {
         this.timeLeft = timer;
         if (this.timer === 0 && timer > 0) {
             this.timer = setInterval(() => {
-                if (this.timeLeft !== 0) this.setCircleDasharray();
+                if (this.timeLeft !== 0) {
+                    this.setCircleDasharray();
+                    this.setRemainingPathColor();
+                }
                 this.countDown();
             }, 10);
         }
@@ -99,9 +124,9 @@ class game extends Component {
     }
     setDifficultyArray = (difficultyLevel) => {
         let wordsArray = [];
-        if (difficultyLevel === "Easy") { wordsArray = this.easyArray }
-        else if (difficultyLevel === "Medium") { wordsArray = this.mediumArray }
-        else { wordsArray = this.mediumArray }
+        if (difficultyLevel === "EASY") { wordsArray = this.easyArray }
+        else if (difficultyLevel === "MEDIUM") { wordsArray = this.mediumArray }
+        else { wordsArray = this.hardArray }
         return wordsArray;
     }
 
@@ -132,12 +157,45 @@ class game extends Component {
     checkDifficultyFactor = () => {
         let difficulty = this.state.difficulty;
         this.userDifficultyFactor += 0.01;
-        if (this.userDifficultyFactor > 1.02 && this.userDifficultyFactor <= 1.05) {
-            difficulty = "Medium";
-        } else if (this.userDifficultyFactor > 1.05) {
-            difficulty = "Hard";
+        if (this.userDifficultyFactor > 1.5 && this.userDifficultyFactor <= 2) {
+            difficulty = "MEDIUM";
+        } else if (this.userDifficultyFactor > 2) {
+            difficulty = "HARD";
         }
         return difficulty;
+    }
+
+    setRemainingPathColor = () => {
+        const { alert, warning, info } = COLOR_CODES;
+        let fraction = this.timeLeft / this.totalTime;
+        // If the remaining time is less than or equal to 5, remove the "warning" class and apply the "alert" class.
+        if (fraction < 0.2) {
+            document
+                .getElementById("base-timer-path-remaining")
+                .classList.remove(warning.color);
+            document
+                .getElementById("base-timer-path-remaining")
+                .classList.add(alert.color);
+
+            // If the remaining time is less than or equal to 10, remove the base color and apply the "warning" class.
+        } else if (fraction < 0.5) {
+            document
+                .getElementById("base-timer-path-remaining")
+                .classList.remove(info.color);
+            document
+                .getElementById("base-timer-path-remaining")
+                .classList.add(warning.color);
+        } else {
+            document
+                .getElementById("base-timer-path-remaining")
+                .classList.remove(warning.color);
+            document
+                .getElementById("base-timer-path-remaining")
+                .classList.remove(alert.color);
+            document
+                .getElementById("base-timer-path-remaining")
+                .classList.add(info.color);
+        }
     }
 
     stopGame = () => {

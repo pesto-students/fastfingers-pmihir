@@ -15,9 +15,9 @@ const Dropdown = (props) => {
     return (
         <div className="select-box--box">
             <div>
-                <div className="dropdown">
-                    <div className="selected-item">{selectedItems}</div>
-                    <AiFillCaretDown className="air-dropdown" onClick={() => setShowItems(!showItems)} /></div>
+                <div className="dropdown" onClick={() => setShowItems(!showItems)} >
+                    <div className="selected-item" >{selectedItems}</div>
+                    <AiFillCaretDown className="air-dropdown" /></div>
             </div>
             {showItems && <div
                 className={"select-box--items"}>

@@ -4,21 +4,27 @@
     font-size: 28px;
     text-transform: uppercase;
     position: absolute;
-    margin-top: 6%;
+    margin-top: 10%;
     color: #ff5155;
-    margin-left: 6%;
+    margin-left: 3.5%;
 }
 .play:hover {
     cursor: pointer;
 }
 .start-game {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Play', sans-serif;
     margin-left: 10px;
+    font-size: 2.2rem;
+    font-weight: 700;
 }
 .errorMessage {
     color: #ff5155;
     line-height: 2.0;
     margin-bottom: 15px;
+}
+
+.no-error {
+    display: none;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 425px) { 

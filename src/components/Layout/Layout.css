@@ -3,8 +3,8 @@
     
     /* background-image: linear-gradient(to bottom, #000000 0%, #0c2c25),url('../../asssets/Group\ 243.svg'); */
     background-size: cover;
-    width: var(--app-width);;
-    height: var(--app-height);;
+    /* width: var(--app-width);;
+    height: var(--app-height);; */
     /* height: 100vh;  */
     /* Fallback for browsers that do not support Custom Properties */
     /* height: calc(var(--vh, 1vh) * var(--vh)); */
@@ -12,4 +12,5 @@
     /* display: flex;
     justify-content: center;
     align-items: center; */
+    height: 100%;
 }
