@@ -14,7 +14,7 @@
     margin-top: 5%;;
 }
 .score-game {
-  font-size: 3rem;
+  font-size: 2rem;
   color: white;
   font-weight: 400;
   font-stretch: normal;
@@ -25,7 +25,7 @@
   /* text-align: left; */
 }
 .score-time {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 500;
     color: white;
   font-stretch: normal;
@@ -35,7 +35,7 @@
   text-transform: uppercase;
 }
 .new-high-score {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: white;
     font-stretch: normal;
@@ -45,7 +45,7 @@
     /* text-transform: uppercase; */
 }
 .play-icon {
-    font-size: 2.2rem;
+    font-size: 2.0rem;
     margin-top: 4%;
     font-weight: 600;
     color: #ea2328;
@@ -55,7 +55,7 @@
     padding-left: 25px;
 }
 .quit {
-    margin-top: 8%;
+    margin-top: 5%;
 }
 .quit > p {
     color: #ff5155;

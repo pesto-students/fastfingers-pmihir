@@ -38,7 +38,7 @@ select option {
 
   .select-box--box {
       position: absolute;
-      width: 23.5%;
+      width: 25%;
   }
 
   .select-box--selected-item {
@@ -62,7 +62,7 @@ select option {
   }
   
   .select-box--items div {
-    padding: 4px 0px 4px 10px;
+    padding: 2px 0px 2px 10px;
     border-radius: 6px;
     /* box-shadow: 0 3px 16px 0 rgb(0 0 0 / 80%); */
     /* border: solid 1px #ffffff; */
