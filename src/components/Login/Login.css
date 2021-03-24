@@ -12,7 +12,7 @@
     height: 100vh;
 }
 .fast-fingers {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 60px;
     font-weight: normal;
     font-stretch: normal;
@@ -22,9 +22,10 @@
     text-align: left;
     color: #ff5155;
     margin-top: 2%;
+    text-transform: uppercase;
   }
   .Line-1 {
-    width: 53px;
+    width: 85px;
   height: 0;
   border: 1px solid #ff5155;
   margin: 3px;
@@ -35,9 +36,11 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin-bottom: 25px;
   }
   .typing-game {
-    padding: 0 41px 0 10px;
+    padding: 0 10px 0 10px;
+    text-transform: uppercase;
   }
   .ultimate-game {
     padding: 0.5rem 0 1.5rem 0;

@@ -1,5 +1,5 @@
 .dropdown {
-    padding: 15px 12px 15px 10px;
+    padding: 10px 12px 10px 10px;
     border-radius: 6px;
     box-shadow: 0 3px 16px 0 rgb(0 0 0 / 80%);
     border: solid 1px #ffffff;
@@ -38,7 +38,7 @@ select option {
 
   .select-box--box {
       position: absolute;
-      width: 27%;
+      width: 23.5%;
   }
 
   .select-box--selected-item {

@@ -1,6 +1,6 @@
 .input-text {
   margin: 0 0 25px;
-  padding: 0px 130px 0px 10px;
+  padding: 0px 115px 0px 10px;
   opacity: 0.59;
   border-radius: 6px;
   box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
@@ -8,11 +8,11 @@
 }
 input,
 input::-webkit-input-placeholder {
-    font-size: 20px;
+    font-size: 1rem;
     line-height: 2.7
 }
 
-@media only screen and (min-width: 320px) and (max-width: 479px){ 
+/* @media only screen and (min-width: 320px) and (max-width: 479px){ 
       .input-text {
         padding: 0
       }
@@ -32,4 +32,4 @@ input::-webkit-input-placeholder {
   .input-text {
     padding: 0px 115px 0px 10px;
   }
- }
+ } */

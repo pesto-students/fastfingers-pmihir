@@ -7,20 +7,29 @@ import {
     withRouter
 } from 'react-router-dom';
 
-const PLACE_HOLDER_NAME = "Type Your Name";
+const PLACE_HOLDER_NAME = "TYPE YOUR NAME";
 
 class Form extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            difficultyLevel: ["Easy", "Medium", "Hard"],
+            difficultyLevel: ["EASY", "MEDIUM", "HARD"],
             form: {
                 name: "",
-                selectedDiffculty: "Easy"
+                selectedDiffculty: "EASY"
             },
             displayError: false
         }
     }
+
+    componentDidMount() {
+        let name = sessionStorage.getItem('name');
+        if (name && name !== '') {
+            console.log(name);
+            this.setState({ ...this.state, form: { ...this.state.form, name: name } });
+        }
+    }
+
     nameChangeHandler = (e) => {
         this.setState({ ...this.state, form: { ...this.state.form, name: e.target.value }, displayError: false });
     }
@@ -49,18 +58,17 @@ class Form extends Component {
                 sessionStorage.setItem("scores", JSON.stringify(temp));
             }
             this.props.history.push('/game');
-            // window.location.pathname = '/game';
-            // window.location.replace(location.pathname + '/game');
         }
     }
     render() {
         return (
             <Aux>
-                <Input onChangeHandler={this.nameChangeHandler} placeHolder={PLACE_HOLDER_NAME} />
-                {this.state.displayError &&
+                <Input typeWord={this.state.form.name} onChangeHandler={this.nameChangeHandler} placeHolder={PLACE_HOLDER_NAME} />
+                {/* {this.state.displayError &&
                     <div className="errorMessage">Username is Required</div>
-                }
-                {console.log(this.state.displayError)}
+                } */}
+                {this.state.displayError}
+                <div className={this.state.displayError ? 'errorMessage' : 'no-error'}>Username is Required</div>
                 <Dropdown difficultyLevel={this.state.difficultyLevel} onSelectHandler={(item) => this.onSelectHandler(item)} ref={this.selectedRef} />
                 <div onClick={this.formDetails} className="play">
                     <div className="fa fa-play"><span className="start-game">Start Game</span></div>
