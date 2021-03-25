@@ -1,5 +1,34 @@
+:root {
+  --app-height: 100%;
+  --app-width: 100%;
+}
+
 .App {
-  text-align: center;
+  /* text-align: center; */
+  /* color: red; */
+  /* min-height: 100vh; */
+  /* width: var(--app-width);
+    height: var(--app-height);; */
+  /* min-height: -webkit-fill-available; */
+  height: 100%;
+}
+
+
+html {
+  /* min-height: 100vh; */
+  /* min-height: -webkit-fill-available; */
+  /* width: var(--app-width);;
+    height: var(--app-height);; */
+
+    height: 100%;
+}
+
+body {
+  /* min-height: 100vh; */
+  /* width: var(--app-width);;
+    height: var(--app-height);; */
+  /* min-height: -webkit-fill-available; */
+  height: 100%;
 }
 
 .App-logo {

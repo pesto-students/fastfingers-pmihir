@@ -1,0 +1,50 @@
+.play {
+    text-align: center;
+    /* padding-top: 16%; */
+    font-size: 28px;
+    text-transform: uppercase;
+    position: absolute;
+    margin-top: 9%;
+    color: #ff5155;
+    margin-left: 3.5%;
+}
+.play:hover {
+    cursor: pointer;
+}
+.start-game {
+    font-family: 'Play', sans-serif;
+    margin-left: 10px;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+.errorMessage {
+    color: #ff5155;
+    line-height: 2.0;
+    margin-bottom: 10px;
+}
+
+.no-error {
+    display: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 425px) { 
+    .play {
+        margin-top: 25%;
+    }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px){ 
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){ 
+    .play {
+        margin-top: 12%;
+        margin-left: 13%;
+    }
+}
+
+@media only screen and (min-width: 992px){ 
+    
+}
+

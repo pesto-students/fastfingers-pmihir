@@ -1,0 +1,27 @@
+.main-header {
+    color:#ff5155;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    width: 90%;
+}
+.user {
+    display: flex;
+    flex-grow: 1;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+.user-icon {
+    margin-right: 2%;
+}
+.fast-finger-text {
+    font-size: 2rem;
+}
+.header-name {
+    display: flex;
+    flex-direction: row;
+}
+.score {
+    text-transform: uppercase;
+}

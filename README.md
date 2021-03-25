@@ -14,7 +14,7 @@ meet the requirements mentioned in the MVP below.
 3. Start the game on `START GAME` button click.
 
 4. Show random word from dictionary and an input box on game screen.
-
+padh el
 - For `EASY` difficulty level, word length should be less than or equal to 4.
 - For `MEDIUM` difficulty level, word length should be between 5-8(noth numbers included).
 - For `HARD` difficulty level, word length should be greater than 8.

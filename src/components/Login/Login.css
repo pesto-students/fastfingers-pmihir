@@ -1,0 +1,48 @@
+.logo {
+    width: 234.2px;
+    object-fit: contain;
+}
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #ff5155;
+    height: 100vh;
+}
+.fast-fingers {
+    font-family: 'Play', sans-serif;
+    font-size: 45px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ff5155;
+    margin-top: 2%;
+    text-transform: uppercase;
+  }
+  .Line-1 {
+    width: 85px;
+  height: 0;
+  border: 1px solid #ff5155;
+  margin: 3px;
+  display:inline-block;
+  }
+  .sub-login {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 90px;
+  }
+  .typing-game {
+    padding: 0 10px 0 10px;
+    text-transform: uppercase;
+  }
+  .ultimate-game {
+    padding: 0.5rem 0 1.5rem 0;
+  }
+  

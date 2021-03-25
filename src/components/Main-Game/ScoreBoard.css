@@ -1,0 +1,14 @@
+.title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+.game-score {
+    align-self: initial;
+    color: white;
+    padding-top: 3%;
+}
+.game-individual {
+    line-height: 2.1;
+    padding-left: 10px;
+}
